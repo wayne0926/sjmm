@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"
+        name="viewport" />
+    <meta charset="UTF-8">
+    <title>随机密码生成器 - WR</title>
+    <link href="https://cdn.jsdelivr.net/gh/wayne0926/hexo-blog@gh-pages/favicon.ico" rel="icon" type="image/x-icon">
+
+    <!--图标库-->
+    <link href='https://cdn.jsdelivr.net/gh/wayne0926/wr20060926.github.io/suijimima/css/font-awesome.min.css' rel='stylesheet'>
+
+    <!--字体库-->
+    <link href='https://fonts.dogedoge.com/css?family=Montserrat&amp;display=swap' rel='stylesheet'>
+
+    <!--主要样式-->
+    <link href="https://cdn.jsdelivr.net/gh/wayne0926/wr20060926.github.io/suijimima/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">密码生成器</h2>
+        <div class="result">
+            <div class="result__title field-title">生成的密码</div>
+            <div class="result__info right">点击复制</div>
+            <div class="result__info left">复制</div>
+            <div class="result__viewbox" id="result">点击“生成密码”按钮生成</div>
+            <button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>
+        </div>
+        <div class="length range__slider" data-max="32" data-min="4">
+            <div class="length__title field-title" data-length='0'>长度：</div>
+            <label for="slider"></label><input id="slider" max="32" min="4" type="range" value="16" />
+        </div>
+
+        <div class="settings">
+            <span class="settings__title field-title">settings</span>
+            <div class="setting">
+                <input checked id="uppercase" type="checkbox" />
+                <label for="uppercase">包含大写</label>
+            </div>
+            <div class="setting">
+                <input checked id="lowercase" type="checkbox" />
+                <label for="lowercase">包含小写</label>
+            </div>
+            <div class="setting">
+                <input checked id="number" type="checkbox" />
+                <label for="number">包括数字</label>
+            </div>
+            <div class="setting">
+                <input id="symbol" type="checkbox" />
+                <label for="symbol">包括符号</label>
+            </div>
+        </div>
+
+        <button class="btn generate" id="generate">生成密码</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/wayne0926/wr20060926.github.io/suijimima/js/script.min.js"></script>
+    <div style="text-align:center;">
+    </div>
+</body>
+
+</html>
